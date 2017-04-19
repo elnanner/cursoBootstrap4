@@ -1,0 +1,468 @@
+html{
+    font-size: 15px;/*definimos la fuente base para uqe luego las otras se tomen el punto                     de referencia de esta etiqueta html, en movil se tiende a usar 15px, luego se pasa a 16px en desktop*/
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;/*todo el sitio tendrá este estilo de letra*/
+    color: #084864;
+}
+
+/*
+**Sección bienvenidos
+*/
+.bienvenidos{
+    background: url("../images/desk2.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+}
+
+.encabezado{
+    background: #5993a8;
+    padding: .5rem 0;/*recorda que el rem trabaja en base a lo que definimos en el html font-size*/
+    color: white;
+}
+
+.encabezado .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.encabezado .container .logo img {
+    width: 150px;
+    height: 50px;
+}
+
+/*Estilos para los botones iconos buscar y menú*/
+.boton-buscar, .boton-menu{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    padding-left: .8rem;
+    padding-right: .8rem;
+    background: transparent;
+    color: #26364e;
+}
+
+.boton-buscar{/*estas prop hacen que flote a la izquierda pero usando flexbox, truquito margin.left*/
+    margin-left: auto;
+    margin-right: .5rem;
+}
+/*para borrar el marcado de los botones y demas en los navegadores usamos el evento focus*/
+.boton-buscar:focus, .boton-menu:focus{
+   outline: 0;
+}
+
+/*estilos bloque buscar*/
+#bloque-buscar{
+    flex: 1 1 100%;
+    
+}
+
+/**/
+.contenedor-bloque-buscar{
+    display: flex;
+    height: 3rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    
+}
+
+.contenedor-bloque-buscar input[type="text"]{/*evitamos darle una clase o un id*/
+    border: 0;
+    border-radius: 5px 0 0 5px;
+    padding: 1rem;
+    flex: 1 1 auto;
+}
+.contenedor-bloque-buscar input[type="submit"]{
+    border:0; 
+    border-radius: 0 5px 5px 0;
+    flex: 0 1 auto;
+    background:  #29abe2;
+    color: #fff;
+    padding: 0 1rem;
+}
+
+/*estilos para el nav, osea la lista del menu para mostrar y ocultar*/
+#menu-principal {
+    flex: 1 1 100%;
+}
+
+#menu-principal ul{
+    padding: 0;
+    list-style: none;
+    margin: 1rem 0 0 0;
+    
+}
+
+#menu-principal ul a{
+    
+    display: block;
+    text-align: center;
+    padding: .5rem 0;
+    color: #fff;
+    text-transform: uppercase;/*transforma el texto, excelente!!!!*/
+    border-top: 1px solid white;
+    text-decoration: none;/*evita el subrayado en los enlaces*/
+}
+#menu-principal ul a:hover, #menu-principal ul li.active a{
+    color: #26364e;
+}
+
+.texto-encabezado .display-4{
+    margin-top: 4.5rem;
+}
+.texto-encabezado .btn-info{
+    color: #fff;
+    background: #5993a8;
+    border-color: transparent;
+    margin-top: 1rem;
+}
+
+.texto-encabezado .btn-info:hover{
+    color: #fff;
+    background-color: rgba(67, 104, 117, 0.89);
+    border-color: transparent;
+    margin-top: 1rem;
+   
+}
+.texto-encabezado .btn-info:active{
+    color: #fff;
+    background: #436875;
+    border-color: transparent;
+    margin-top: 1rem;
+}
+
+/*flecha de bajada */
+
+.flecha-bajada a{
+    display: inline-block;
+    color: #fff;
+    font-size: 4rem;
+    /*asignamos la animacion que definimos mas abajo*/
+    animation: flecha-animada 1.5s ease-in-out infinite;
+    
+}
+/*hacemos la animacion*/
+@keyframes flecha-animada{
+    from{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+
+/*Fin sección bienvenidos*
+** Sección Agencia
+*/
+
+.agencia{
+    background: #5993a8;
+    color:#fff;
+   
+}
+
+.agencia img{
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+}
+
+/***************************
+SECCION TU MEJOR ELECCION
+****************************/
+
+.tu-mejor-eleccion h2 span{
+    color: #29abe2;
+}
+
+.tu-mejor-eleccion ul,
+.tu-mejor-eleccion ul li{
+    list-style: none;
+    min-height: 7.5rem;
+}
+
+.tu-mejor-eleccion ul li .fa{/*FA SON LOS ICONOS*/
+    background-color: #436875;
+    color: #fff;
+    font-size: 3rem;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    line-height: 4.8rem;
+    text-align: center;
+}
+
+.tu-mejor-eleccion ul li h4{
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: .8rem;
+    
+}
+.servicios {
+    background: url("../images/services.jpg") no-repeat center;
+    background-size: cover;
+    color: #fff;
+    
+}
+
+.servicios h2{
+    text-align: center;
+}
+
+.servicios article{
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;  
+}
+
+.servicios img{
+    flex: 0 1 auto;
+    overflow: hidden;
+    margin-right: 1rem;
+    background: #5993a8;
+    border-radius: 50%;
+    padding: .5rem;
+    transition: all 1s ease;/*revisar borrado*/
+}
+
+.servicios h3{
+    margin: 0;
+    font-size: 1.4rem; 
+    flex: 1 1 auto;
+    
+}
+.servicios h3 a{
+    color: #fff; 
+    display: flex;/*los hijos aca son el texto p y after*/
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.servicios h3 a::after{
+    content: "\f054";
+    font-family: FontAwesome;
+    font-size: 2rem;
+    margin-left: 1rem;
+    opacity: .5;
+    position: relative;
+    left:0;
+    transition: all .4s ease;
+}
+.servicios h3 a:hover::after{/* usando hover asi el hover se produce sobre el elemento after */
+    left: -10px;
+    color: #5993a8;
+    opacity: 1;
+    
+    
+}
+.servicios article p{
+    padding: 2rem;
+}
+/************************
+Últimos proyectos- Galería
+************************/
+.ultimos-proyectos a{
+    text-decoration: none;
+    text-align: center;
+}
+
+.ultimos-proyectos a h4{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #436875;
+}
+
+.ultimos-proyectos .container{
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+}
+
+.ultimos-proyectos .owl-nav{
+    margin: 1rem 0;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.ultimos-proyectos .owl-prev,.ultimos-proyectos .owl-next {
+    margin: 0 .5rem;
+    color: #5993a8;
+    
+}
+
+.ultimos-proyectos .owl-prev:hover,.ultimos-proyectos .owl-next:hover {
+    color: #436875;
+    transition: .4s ease;
+    
+}
+
+/*************************
+SECCION PIE DE PAGINA
+*************************/
+.pie-de-pagina{
+    background: #5993a8;
+    color: #fff;
+    text-align: center;
+}
+.pie-de-pagina .redes-sociales{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin:0;/*para los elementos ul, idem con padding*/
+    padding: 0;
+   
+}
+.redes-sociales a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;/*por mas que tenga los <i> iconos, el size se lo da este atributo*/
+    margin: 0 2rem;
+    opacity: .7;
+}
+
+.redes-sociales a:hover{
+    opacity: 1;    
+}
+
+.ir-arriba{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    color:  #436875;
+    text-decoration: none;
+    z-index: 99999;/*capas donde se mostrara*/
+    line-height: 0;/*para que la distancia entre bottom y right sea igual, sino es mas distanciado al bottom que al right*/
+    transition: all .7s ease;
+}
+.ir-arriba:hover{
+    
+    color:   #2a434b;
+}
+
+/******************************
+MEDIA QUERYS
+******************************/
+@media(min-width:768px){/*cuando como minimo(minimo 768px o mas) la pantalla tenga 768px*/
+    
+    #menu-principal{
+        height: auto !important;
+        display: block;
+        order: 1;
+        flex: 0 1 auto;
+        margin-left: auto;
+        
+    }
+    .boton-buscar{
+        order: 2;
+    }
+    
+    #bloque-buscar{
+        order:3;
+        position: absolute;
+        width: 20rem;
+        right: -1.5rem;
+        top: 3.2rem;
+        
+        
+    }
+    #menu-principal ul {
+        display: flex;
+        margin: 0 0 0 0;
+       
+    }
+    
+    #menu-principal ul li a {
+        padding: 1rem;
+        border: none;
+        text-transform: capitalize;
+        border-bottom: 3px solid transparent;/*para evitar que IE no genere errores*/
+        margin: 0 .3rem;
+        transition: all .5s ease;
+    }
+    #menu-principal ul a:hover, #menu-principal ul li.active a{
+        border-bottom: 3px solid #2a434b;
+        
+    }
+    /*SERVICIOS*/
+    .servicios article{
+        margin: 1rem auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        /* text-align: center; */
+    }
+    
+    .servicios article:hover img{
+        transform: rotateY(360deg);
+        transform-style: preserve-3d;/*para img en 3d sirve, aca no*/
+        
+    }
+    .servicios h3{
+        margin: 1rem 0 0 0;
+    }
+    .servicios h3 a::after {
+        display: none;
+    }
+    
+    
+    
+}/*fin media query 768px*/
+    
+
+/*****992px*****/
+@media(min-width:992px){/*cuando como minimo(minimo 768px o mas) la pantalla tenga 768px*/
+    
+    html{
+        font-size: 16px;
+    } 
+    
+    .tu-mejor-eleccion li{
+        display: flex;
+        flex: 1 0 auto;
+       
+    }
+    
+    .tu-mejor-eleccion li .fa{
+        margin-right: 1rem;
+        flex: 0 1 auto;
+        text-align: center;
+        transition: all 1s ease;
+    }
+    /*movimiento de los iconos y la lista*/
+    .tu-mejor-eleccion li:hover .fa{
+        transform: rotateX(360deg);
+        background:#5993a8;
+    }
+    
+    .tu-mejor-eleccion .contenedor-eleccion{
+        flex: 0 1 0px;
+        
+    }
+    .tu-mejor-eleccion ul li h4 {
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-top: 0;
+        min-width: 10rem;
+    }
+    
+    .tu-mejor-eleccion ul:first-child .fa{
+        order:1;
+        margin-left: 1rem;
+       
+    }
+    
+    .tu-mejor-eleccion ul li p{
+        font-size: .8rem;
+    }
+}/*fin media query 992px*/

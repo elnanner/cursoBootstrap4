@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            background: #3f2ebe;
+        }
+        
+        nav{
+            background: #453a3a;
+            max-width: 800px;
+            margin: 0 auto;
+            
+        }
+        nav ul{
+            list-style: none;
+            padding: 0;
+            margin:0;
+               
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul a{
+            
+            color: #fff;
+            padding: 1rem;
+            text-decoration: none;
+            display: block;/*porque es en linea y su padre es en block, entonces no reconoce las propiedades*/
+        }
+        nav ul a:hover{
+            background: #4b87ce;
+            color: #0816b7;
+            
+            
+        }
+        
+        @media(max-width:550px){/*cuando la anchura sea 550 o menos, o solo que hasta 550 son validas*/
+            nav ul{
+                flex-direction: column;
+            }
+            
+            nav ul a{
+                
+                text-align: center;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Enlace 1</a></li>
+            <li><a href="#">Enlace 2</a></li>
+            <li><a href="#">Enlace 3</a></li>
+            <li><a href="#">Enlace 4</a></li>
+            <li><a href="#">Enlace 5</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

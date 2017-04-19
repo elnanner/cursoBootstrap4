@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Ejemplo Flexbox biograf&iacute;a</title>
+    <style>
+        body{
+            background: rgb(110, 47, 211);
+        }
+        section{
+            max-width: 600px;
+            padding: 1rem;
+            margin: 0 auto;
+            border: 1px solid rgba(255, 0, 0, 0.44);
+            border-radius: 5px;
+            background: rgba(65, 65, 103, 0.28);
+            display: flex;
+            align-items: center;
+        }
+        img{
+            margin-right: 1rem;
+            
+        }
+        p{
+            margin: 0;
+        }
+        @media (max-width:400px) {
+            section{
+                flex-direction: column;
+            }
+            img{
+                margin-right: 1rem;
+                flex: 0 1 200px;
+                margin-bottom: 1rem;
+            }
+            p{
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+        <section class="biografia">
+            <img src="images/consulting.svg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore sint a maiores neque repellat non laudantium error, aperiam, rerum officiis maxime molestias veniam fugit doloribus quis harum dicta aut in.</p>
+     
+        </section>
+</body>
+</html>
